@@ -1,17 +1,17 @@
 import "./Card.css";
 
-function Card() {
+export default function Card({ question, answer, tag_1, tag_2, tag_3 }) {
   return (
     <section className="card">
-      <h2>Question</h2>
+      <h2>{question}</h2>
       <button className="card__button-answer" type="button">
         Show answer
       </button>
-      <p className="card__answer card__answer--active">Answer lorem ipsum...</p>
+      <p className="card__answer card__answer--active">{answer}</p>
       <ul className="card__tag-list">
-        <li className="card__tag-list-item">#HTML</li>
-        <li className="card__tag-list-item">#CSS</li>
-        <li className="card__tag-list-item">#JavaScript</li>
+        <li className="card__tag-list-item">{tag_1}</li>
+        <li className="card__tag-list-item">{tag_2}</li>
+        <li className="card__tag-list-item">{tag_3}</li>
       </ul>
       <div className="card__button-bookmark">
         <button className="card__bookmark" aria-label="bookmark" type="button">
@@ -23,5 +23,3 @@ function Card() {
     </section>
   );
 }
-
-export default Card;
