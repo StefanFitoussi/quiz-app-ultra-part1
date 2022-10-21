@@ -1,6 +1,6 @@
 import "./Card.css";
 
-function Card({ question, answer, tag_1, tag_2, tag_3 }) {
+export default function Card({ question, answer, tag_1, tag_2, tag_3 }) {
   return (
     <section className="card">
       <h2>{question}</h2>
@@ -23,5 +23,3 @@ function Card({ question, answer, tag_1, tag_2, tag_3 }) {
     </section>
   );
 }
-
-export default Card;
